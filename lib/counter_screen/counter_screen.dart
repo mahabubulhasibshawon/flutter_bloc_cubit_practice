@@ -4,6 +4,7 @@ import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/checkbox_cubit.
 import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/checkbox_cubit.dart';
 import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/counter_cubit.dart';
 import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/text_cubit.dart';
+import 'package:flutter_bloc_cubit_practice/counter_screen/dynamic_counter_screen.dart';
 
 class CounterScreen extends StatelessWidget {
   const CounterScreen({super.key});
@@ -69,7 +70,10 @@ class CounterScreen extends StatelessWidget {
                 },
               )
             ],
-          )
+          ),
+          ElevatedButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> DynamicCounterScreen()));
+          }, child: Text('Dynamic Counter Page'))
         ],
       ),
       floatingActionButton: Row(
