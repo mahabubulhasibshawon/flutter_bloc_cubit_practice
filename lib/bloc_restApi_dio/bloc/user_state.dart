@@ -12,7 +12,7 @@ final class UserInitial extends UserState {
 class UserLoading extends UserState {
   @override
   // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
 
 class UserLoaded extends UserState {

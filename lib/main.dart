@@ -6,6 +6,8 @@ import 'package:flutter_bloc_cubit_practice/counter_screen/counter_screen.dart';
 import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/checkbox_cubit.dart';
 import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/counter_cubit.dart';
 import 'package:flutter_bloc_cubit_practice/counter_screen/cubit/text_cubit.dart';
+import 'package:flutter_bloc_cubit_practice/cubit_posts_restApi/bloc/product_bloc.dart';
+import 'package:flutter_bloc_cubit_practice/cubit_posts_restApi/presentation/products_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +25,9 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => TextCubit()),
           BlocProvider(create: (context) => CheckboxCubit()),
           BlocProvider(create: (context) => UserBloc()),
+          BlocProvider(create: (context) => ProductBloc()),
         ],
-        child: UserScreen(),
+        child: ProductsScreen(),
       ),
     );
   }
